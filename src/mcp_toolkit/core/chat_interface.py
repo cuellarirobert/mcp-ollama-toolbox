@@ -36,7 +36,7 @@ class MCPOllamaChat:
         
         for tool in manifest.get("tools", []):
             tool_name = tool["name"]
-            self.available_functions[tool_name] = lambda **kwargs, tc=tool_collection, tn=tool_name: tc.execute_tool(tn, kwargs)
+            self.available_functions[tool_name] = lambda tc=tool_collection, tn=tool_name, **kwargs: tc.execute_tool(tn, kwargs)
             self.function_descriptions[tool_name] = tool["description"]
             
             # Convert to Ollama function schema
