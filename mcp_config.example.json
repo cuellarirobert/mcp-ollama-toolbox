@@ -1,0 +1,48 @@
+{
+  "_instructions": {
+    "description": "MCP Toolkit Configuration Template",
+    "setup_steps": [
+      "1. Copy this file to 'mcp_config.json'",
+      "2. Replace all placeholder values with your actual credentials",
+      "3. Update URLs to match your API endpoints",
+      "4. Change 'current_environment' as needed",
+      "5. Save and restart the application"
+    ]
+  },
+  "current_environment": "production",
+  "environments": {
+    "development": {
+      "name": "Development Environment",
+      "oauth": {
+        "client_id": "PUT_YOUR_DEV_CLIENT_ID_HERE",
+        "client_secret": "PUT_YOUR_DEV_CLIENT_SECRET_HERE",
+        "token_url": "https://dev-api.yourcompany.com/oauth/token",
+        "auth_url": "https://dev-api.yourcompany.com/oauth/authorize",
+        "redirect_uri": "http://localhost:8080/callback",
+        "default_scope": "read write"
+      }
+    },
+    "staging": {
+      "name": "Staging Environment", 
+      "oauth": {
+        "client_id": "PUT_YOUR_STAGING_CLIENT_ID_HERE",
+        "client_secret": "PUT_YOUR_STAGING_CLIENT_SECRET_HERE",
+        "token_url": "https://staging-api.yourcompany.com/oauth/token",
+        "auth_url": "https://staging-api.yourcompany.com/oauth/authorize",
+        "redirect_uri": "http://localhost:8080/callback",
+        "default_scope": "read write"
+      }
+    },
+    "production": {
+      "name": "Production Environment",
+      "oauth": {
+        "client_id": "PUT_YOUR_PROD_CLIENT_ID_HERE", 
+        "client_secret": "PUT_YOUR_PROD_CLIENT_SECRET_HERE",
+        "token_url": "https://api.yourcompany.com/oauth/token",
+        "auth_url": "https://api.yourcompany.com/oauth/authorize",
+        "redirect_uri": "http://localhost:8080/callback",
+        "default_scope": "read write"
+      }
+    }
+  }
+}

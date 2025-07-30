@@ -1,0 +1,5 @@
+# MCP Toolkit Config (contains secrets)
+mcp_config.json
+
+# But include the example
+!mcp_config.example.json

@@ -1,0 +1,38 @@
+{
+  "current_environment": "production",
+  "environments": {
+    "development": {
+      "name": "Development",
+      "oauth": {
+        "client_id": "dev_client_12345",
+        "client_secret": "dev_secret_abcdef",
+        "token_url": "https://dev-api.example.com/oauth/token",
+        "auth_url": "https://dev-api.example.com/oauth/authorize",
+        "redirect_uri": "http://localhost:8080/callback",
+        "default_scope": "read write admin"
+      }
+    },
+    "staging": {
+      "name": "Staging",
+      "oauth": {
+        "client_id": "staging_client_67890",
+        "client_secret": "staging_secret_ghijkl",
+        "token_url": "https://staging-api.example.com/oauth/token",
+        "auth_url": "https://staging-api.example.com/oauth/authorize",
+        "redirect_uri": "http://localhost:8080/callback",
+        "default_scope": "read write"
+      }
+    },
+    "production": {
+      "name": "Production",
+      "oauth": {
+        "client_id": "prod_client_11111",
+        "client_secret": "prod_secret_mnopqr",
+        "token_url": "https://api.example.com/oauth/token",
+        "auth_url": "https://api.example.com/oauth/authorize",
+        "redirect_uri": "http://localhost:8080/callback",
+        "default_scope": "read write"
+      }
+    }
+  }
+}
